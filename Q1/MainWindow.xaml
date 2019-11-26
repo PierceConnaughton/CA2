@@ -6,12 +6,12 @@
         xmlns:local="clr-namespace:Q1"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid Loaded="Grid_Loaded">
+    <Grid x:Name="rbAir" Loaded="Grid_Loaded">
         <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="77,49,0,0" Text="Activity Planner" Foreground="#FF08C8D1" FontSize="24"/>
-        <RadioButton Content="All" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,130,0,0"/>
-        <RadioButton Content="Land" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,150,0,0"/>
-        <RadioButton Content="Water" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,170,0,0"/>
-        <RadioButton Content="Air" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,190,0,0"/>
+        <RadioButton x:Name="rbAll" Content="All" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,130,0,0" Click="RbAll_Click"/>
+        <RadioButton x:Name="rbLand" Content="Land" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,150,0,0" Click="RbAll_Click"/>
+        <RadioButton x:Name="rbWater" Content="Water" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,170,0,0" Click="RbAll_Click"/>
+        <RadioButton x:Name="rbAir1" Content="Air" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,190,0,0" Click="RbAll_Click"/>
         <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="All Activities" VerticalAlignment="Top" Margin="77,96,0,0"/>
         <ListBox x:Name="lstAllActivties" HorizontalAlignment="Left" Height="199" VerticalAlignment="Top" Width="217" Margin="77,130,0,0" SelectionChanged="ListBox_SelectionChanged"/>
         <Button x:Name="btnAdd" Content="&gt;&gt;" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="370,175,0,0" Click="btnAdd_Click"/>
@@ -19,7 +19,7 @@
         <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Total Cost" VerticalAlignment="Top" Margin="527,52,0,0"/>
         <TextBlock x:Name="TxtTotal" HorizontalAlignment="Left" TextWrapping="Wrap" Text="€0.00" VerticalAlignment="Top" Margin="667,55,0,0"/>
         <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="527,96,0,0"><Run Text="Selected Activitie"/><Run Text="s"/></TextBlock>
-        <ListBox x:Name="lstBxSelected" HorizontalAlignment="Left" Height="199" VerticalAlignment="Top" Width="217" Margin="527,130,0,0"/>
+        <ListBox x:Name="lstBxSelected" HorizontalAlignment="Left" Height="199" VerticalAlignment="Top" Width="217" Margin="527,130,0,0" SelectionChanged="lstBxSelected_SelectionChanged"/>
         <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="77,362,0,0"><Run Text="Description"/><Run Text=": "/></TextBlock>
         <TextBlock x:Name="txtBlDescription" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Null" VerticalAlignment="Top" Margin="77,393,0,0"/>
 
